@@ -8,7 +8,7 @@ contract A {
     }
 }
 
-contract B is A{
+contract B is A {
     
     function getValue() virtual override public pure returns (string memory) {
         return string(abi.encodePacked("B -> ", super.getValue()));
