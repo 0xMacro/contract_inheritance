@@ -1,2 +1,2 @@
 # contract_inheritance
-code for the contracts inheritance toy problem
+code for the contract inheritance toy problem
