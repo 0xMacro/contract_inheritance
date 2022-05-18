@@ -1,0 +1,14 @@
+Rules for constructing the linearized inheritance chain
+
+1: go right to left through the 'is' list
+
+2: go depth first
+
+3: when a contract appears more than once in the inheritance chain, skip all but the last occurence
+
+see also:
+
+https://solidity-by-example.org/super/
+https://docs.soliditylang.org/en/v0.6.0/contracts.html#inheritance
+https://medium.com/coinmonks/inheritance-in-solidity-debunked-3d8dd32d3a99
+https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem
