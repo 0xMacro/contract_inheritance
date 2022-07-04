@@ -1,9 +1,8 @@
-const { expect } = require("chai")
 
 describe("inheritance", function () {
 
   it("log contract.getValue()", async function () {
-    const contractName = "D"
+    const contractName = "A"
     const factory = await ethers.getContractFactory(contractName)
     const contract = await factory.deploy()
     await contract.deployed()
