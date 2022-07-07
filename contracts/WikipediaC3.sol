@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
+// Solidity contracts corresponding to the Python class examples from https://en.wikipedia.org/wiki/C3_linearization
+
 contract O {
     
     function getValue() virtual public pure returns (string memory) {
