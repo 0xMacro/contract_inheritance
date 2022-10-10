@@ -8,21 +8,21 @@ contract O {
     }
 }
 
-contract A is O {
+contract AA is O {
     
     function getValue() virtual override public pure returns (string memory) {
         return string(abi.encodePacked("A -> ", super.getValue()));
     }
 }
 
-contract B is O {
+contract BB is O {
     
     function getValue() virtual override public pure returns (string memory) {
         return string(abi.encodePacked("B -> ", super.getValue()));
     }
 }
 
-contract C is O {
+contract CC is O {
     
     function getValue() virtual override public pure returns (string memory) {
         return string(abi.encodePacked("C -> ", super.getValue()));
@@ -36,30 +36,30 @@ contract DD is O {
     }
 }
 
-contract E is O {
+contract EE is O {
     
     function getValue() virtual override public pure returns (string memory) {
         return string(abi.encodePacked("E -> ", super.getValue()));
     }
 }
 
-contract K1 is A, B, C {
+contract K1 is AA, BB, CC {
     
-    function getValue() virtual override(A, B, C) public pure returns (string memory) {
+    function getValue() virtual override(AA, BB, CC) public pure returns (string memory) {
         return string(abi.encodePacked("K1 -> ", super.getValue()));
     }
 }
 
-contract K3 is DD, A {
+contract K3 is DD, AA {
     
-    function getValue() virtual override(DD, A) public pure returns (string memory) {
+    function getValue() virtual override(DD, AA) public pure returns (string memory) {
         return string(abi.encodePacked("K3 -> ", super.getValue()));
     }
 }
 
-contract K2 is E, DD, B {
+contract K2 is EE, DD, BB {
     
-    function getValue() virtual override(E, DD, B) public pure returns (string memory) {
+    function getValue() virtual override(EE, DD, BB) public pure returns (string memory) {
         return string(abi.encodePacked("K2 -> ", super.getValue()));
     }
 }
