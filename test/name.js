@@ -1,5 +1,5 @@
 
-describe("inheritance", function () {
+describe("inheritance: track chain of super.getValue()", function () {
 
   it("log contract.getValue()", async function () {
     const contractName = "A"
@@ -8,7 +8,7 @@ describe("inheritance", function () {
     await contract.deployed()
     
     const value = await contract.getValue()
-    console.log(`name: ${contractName}, value: ${value}`);
+    console.log(`  contract: ${contractName},\n  chain of contracts implementing getValue: ${value}`)
   })
 
 })
